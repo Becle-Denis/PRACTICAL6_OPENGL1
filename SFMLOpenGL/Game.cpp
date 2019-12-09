@@ -86,6 +86,17 @@ void Game::draw()
 			glVertex3f(0.0, 2.0, -5.0);
 		}
 		glEnd();
+		break;
+
+	case 4:
+		glBegin(GL_LINE_STRIP); {
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(-1.0, 2.0, -5.0);
+			glVertex3f(0.0, -2.0, -5.0);
+			glVertex3f(1.0, 2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+		}
+		glEnd();
 	}
 
 	
