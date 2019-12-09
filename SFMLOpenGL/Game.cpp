@@ -97,10 +97,18 @@ void Game::draw()
 			glVertex3f(2.0, -2.0, -5.0);
 		}
 		glEnd();
-	}
+		break;
 
-	
-	
+	case 5:
+		glBegin(GL_LINE_LOOP); {
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(-1.0, 2.0, -5.0);
+			glVertex3f(1.0, 2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+		}
+		glEnd();
+		break;
+	}	
 
 	window.display();
 }
