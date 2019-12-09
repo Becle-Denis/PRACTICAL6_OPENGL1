@@ -23,6 +23,10 @@ void Game::run()
 			{
 				isRunning = false;
 			}
+			if (event.type == Event::KeyPressed)
+			{
+				m_state++;
+			}
 		}
 		update();
 		draw();
@@ -49,12 +53,43 @@ void Game::draw()
 {
 	cout << "Draw up" << endl;
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glBegin(GL_TRIANGLES); {
-		glVertex3f(0.0, 2.0, -5.0);
-		glVertex3f(-2.0, -2.0, -5.0);
-		glVertex3f(2.0, -2.0, -5.0);
+
+	switch (m_state)
+	{
+	case 0:
+		break;
+	case 1:
+		glBegin(GL_TRIANGLES); {
+			glVertex3f(0.0, 2.0, -5.0);
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+		}
+		glEnd();
+		break;
+
+	case 2:
+		glBegin(GL_POINTS); {
+			glVertex3f(0.0, 2.0, -5.0);
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+		}
+		glEnd();
+		break;
+
+	case 3:
+		glBegin(GL_LINES); {
+			glVertex3f(0.0, 2.0, -5.0);
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(-2.0, -2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+			glVertex3f(2.0, -2.0, -5.0);
+			glVertex3f(0.0, 2.0, -5.0);
+		}
+		glEnd();
 	}
-	glEnd();
+
+	
+	
 
 	window.display();
 }
