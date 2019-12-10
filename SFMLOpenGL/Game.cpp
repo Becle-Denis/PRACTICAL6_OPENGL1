@@ -38,6 +38,17 @@ void Game::run()
 					std::cout << "Rotate f " << std::endl;
 					glRotatef(10, 0.0, 0.0, 1.0);
 				}
+
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::T))
+				{
+					std::cout << "Translate f " << std::endl;
+					glTranslatef(1.0, 0.0, 0.0);
+				}
+
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+				{
+					std::cout << "Scale f " << std::endl;
+				}
 				
 			}
 		}
