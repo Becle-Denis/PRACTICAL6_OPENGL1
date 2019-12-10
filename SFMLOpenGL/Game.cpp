@@ -72,6 +72,9 @@ void Game::draw()
 			glVertex3f(0.0, 2.0, -5.0);
 			glVertex3f(-2.0, -2.0, -5.0);
 			glVertex3f(2.0, -2.0, -5.0);
+
+			
+			
 		}
 		glEnd();
 		break;
@@ -134,13 +137,26 @@ void Game::draw()
 			glVertex3f(-2.0, 0.0, -10.0);
 			glVertex3f(0.0, -4.0, -10.0);
 			
-			
-			
-
 			glVertex3f(4.0, -4.0, -10.0);
 
+			glVertex3f(0.0, 4.0, -10.0);
+
+		}
+		glEnd();
+		break;
+
+	case 8:
+		glBegin(GL_TRIANGLE_FAN); {
+			glVertex3f(0.0, -4.0, -10.0);
+
+			glVertex3f(-2.0, 0.0, -10.0);
+			
 
 			glVertex3f(0.0, 4.0, -10.0);
+
+			glVertex3f(4.0, -4.0, -10.0);
+		
+
 
 		}
 		glEnd();
