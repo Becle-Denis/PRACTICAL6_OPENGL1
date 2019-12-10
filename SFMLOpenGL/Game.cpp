@@ -173,6 +173,23 @@ void Game::draw()
 
 			glVertex3f(2.0, 0.0, -10.0);
 
+		}
+		glEnd();
+		break;
+
+	case 10:
+		glBegin(GL_QUAD_STRIP); {
+			glVertex3f(0.0, -2.0, -10.0);
+
+			glVertex3f(-2.0, 0.0, -10.0);
+
+			glVertex3f(2.0, 0.0, -10.0);
+
+			glVertex3f(0.0, 2.0, -10.0);
+
+			glVertex3f(4.0, 2.0, -10.0);
+
+			glVertex3f(2.0, 4.0, -10.0);
 
 
 		}
