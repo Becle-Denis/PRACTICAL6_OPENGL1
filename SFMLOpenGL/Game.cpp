@@ -15,8 +15,6 @@ void Game::run()
 
 	while (isRunning) {
 
-		cout << "Game running..." << endl;
-
 		while (window.pollEvent(event))
 		{
 			if (event.type == Event::Closed)
@@ -46,12 +44,12 @@ void Game::initialize()
 
 void Game::update()
 {
-	cout << "Update up" << endl;
+	
 }
 
 void Game::draw()
 {
-	cout << "Draw up" << endl;
+	
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	switch (m_state)
@@ -195,6 +193,29 @@ void Game::draw()
 		}
 		glEnd();
 		break;
+
+	case 11:
+		glBegin(GL_POLYGON); {
+
+			glVertex3f(0.0, -4.0, -10.0);
+
+			glVertex3f(-3.0,-3.0,-10.0);
+
+			glVertex3f(-4.0, 0.0, -10.0);
+
+			glVertex3f(-3.0, 3.0, -10.0);
+
+			glVertex3f(0.0, 4.0, -10.0);
+
+			glVertex3f(3.0, 3.0, -10.0);
+
+			glVertex3f(4.0, 0.0, -10.0);
+
+			glVertex3f(3.0, -3.0, -10.0);
+			
+		}
+		glEnd();
+		break;
 	}	
 
 	window.display();
@@ -202,6 +223,6 @@ void Game::draw()
 
 void Game::unload()
 {
-	cout << "Cleaning up" << endl;
+	
 }
 
