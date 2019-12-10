@@ -48,6 +48,7 @@ void Game::run()
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
 				{
 					std::cout << "Scale f " << std::endl;
+					glScalef(1.0, 1.0, 1.2);
 				}
 				
 			}
