@@ -20,8 +20,10 @@ private:
 	void update();
 	void draw();
 	void unload();
+	bool m_displayedInfo{ false };
 
 	int m_state{ 0 };
+	int m_stateMax{ 0 };
 
 	// // Uncomment for Part 2
 	// // ********************
