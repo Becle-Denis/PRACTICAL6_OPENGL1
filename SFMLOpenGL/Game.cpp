@@ -161,6 +161,23 @@ void Game::draw()
 		}
 		glEnd();
 		break;
+
+	case 9:
+		glBegin(GL_QUADS); {
+			glVertex3f(0.0, -2.0, -10.0);
+
+			glVertex3f(-2.0, 0.0, -10.0);
+
+
+			glVertex3f(0.0, 2.0, -10.0);
+
+			glVertex3f(2.0, 0.0, -10.0);
+
+
+
+		}
+		glEnd();
+		break;
 	}	
 
 	window.display();
