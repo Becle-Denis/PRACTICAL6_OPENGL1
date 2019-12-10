@@ -126,6 +126,25 @@ void Game::draw()
 			
 		}
 		glEnd();
+		break;
+
+	case 7:
+		glBegin(GL_TRIANGLE_STRIP); {
+			glVertex3f(-4.0, -4.0, -10.0);
+			glVertex3f(-2.0, 0.0, -10.0);
+			glVertex3f(0.0, -4.0, -10.0);
+			
+			
+			
+
+			glVertex3f(4.0, -4.0, -10.0);
+
+
+			glVertex3f(0.0, 4.0, -10.0);
+
+		}
+		glEnd();
+		break;
 	}	
 
 	window.display();
