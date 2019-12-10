@@ -23,12 +23,22 @@ void Game::run()
 			}
 			if (event.type == Event::KeyPressed)
 			{
-				m_displayedInfo = false;
-				m_state++;
-				if (m_state > m_stateMax)
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 				{
-					m_state = 1;
+					m_displayedInfo = false;
+					m_state++;
+					if (m_state > m_stateMax)
+					{
+						m_state = 1;
+					}
 				}
+
+				if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+				{
+					std::cout << "Rotate f " << std::endl;
+					glRotatef(10, 0.0, 0.0, 1.0);
+				}
+				
 			}
 		}
 		update();
@@ -75,6 +85,7 @@ void Game::draw()
 			glVertex3f(2.0, -2.0, -5.0);
 		}
 		glEnd();
+
 		break;
 
 	case 2:
@@ -287,6 +298,7 @@ void Game::draw()
 			
 		}
 		glEnd();
+		
 		break;
 	}	
 
